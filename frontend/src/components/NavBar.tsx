@@ -1,14 +1,14 @@
 import React from "react";
 import {Link} from 'react-router-dom'
+import {AvatarPicture} from "./AvatarPicture";
 
 export function NavBar() {
     return (
         <>
             <nav className="h-20 flex justify-center items-center bg-orange-300 shadow border-b-2 border-amber-600 px-20">
                 <Link to="/authorization">
-                    <div className="p-3.5  bg-gray-50 rounded-full justify-start items-start gap-2.5 inline-flex">
-                        <div className=" w-8 h-8 relative" />
-                    </div>
+                    <AvatarPicture size={14} />
+                    {/*<div className="bg-gray-300 rounded-full h-14 w-14" />*/}
                 </Link>
                 <div className="flex justify-between mx-auto gap-x-12 text-stone-700 text-xl font-semibold">
                     <Link to="/news"><span className="hover:text-white">Новости</span></Link>
