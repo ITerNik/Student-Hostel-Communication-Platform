@@ -1,4 +1,3 @@
-import React from "react";
 import {AvatarPicture} from "../components/AvatarPicture";
 import {ContactInfo} from "../components/ContactInfo";
 import {administrationMembers} from "../../administrationMembers";
@@ -14,12 +13,12 @@ export function HomePage() {
             </div>
             <img className="absolute rounded-2xl border-2 border-orange-600 w-1/2 -right-20 top-28"
                  src={hostelFacade} alt="hostel-facade"/>
-            <div className="block pt-40 px-32 bg-cover" style={{
+            <div className="block py-40 px-32 bg-cover" style={{
                 backgroundImage : `url(${vectorLine})`
 
             }}>
-                <div className="block mb-10 pt-10">
-                    <h1 className="text-amber-600 text-[46px] font-bold mb-6 w-4/6 mb-0">Общая информация</h1>
+                <div className="block mb-16 pt-10 ml-72">
+                    <h1 className="text-amber-600 text-[46px] font-bold w-4/6 mb-0 w-full">Общая информация</h1>
                     <p className="text-stone-700 font-semibold text-2xl">Администрация общежития</p>
                 </div>
                 <div className=" w-full inline-flex gap-x-10 items-center">
@@ -30,11 +29,11 @@ export function HomePage() {
                     <ContactInfo info={administrationMembers[1]} invert={true}/>
                     <AvatarPicture size={32}/>
                 </div>
-                <div className="w-full inline-flex gap-x-10 items-center mb-20">
+                <div className="w-full inline-flex gap-x-10 items-center mb-16">
                     <AvatarPicture size={32}/>
                     <ContactInfo info={administrationMembers[2]} />
                 </div>
-                <p className="w-full text-stone-700 font-semibold text-2xl mb-16">Студенческий совет общежития</p>
+                <p className="w-full text-stone-700 font-semibold text-2xl mb-14">Студенческий совет общежития</p>
                 <div className=" inline-flex gap-x-10 items-center">
                     <AvatarPicture size={32}/>
                     <ContactInfo info={administrationMembers[3]} />

@@ -1,17 +1,26 @@
-import React from "react";
 
 interface AvatarPictureProps {
     source?: string
-    size: number
 }
 
-export function AvatarPicture({source, size}: AvatarPictureProps) {
+export function AvatarPicture({source}: AvatarPictureProps) {
     if (!source) return (
-        <div className={`w-${size}
-         h-${size} rounded-full bg-gray-300`}/>
+        <div className={`w-32
+         h-32 rounded-full bg-gray-300`}/>
     )
     return (
-        <img className={`w-${size} h-${size} rounded-full`}
+        <img className={`w-32 h-32 rounded-full`}
+             src={source} alt="avatar"/>
+    )
+}
+
+export function ProfilePicture({source}: AvatarPictureProps) {
+    if (!source) return (
+        <div className={`w-14
+         h-14 rounded-full bg-gray-300`}/>
+    )
+    return (
+        <img className={`w-14 h-14 rounded-full`}
              src={source} alt="avatar"/>
     )
 }
