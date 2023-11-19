@@ -22,25 +22,25 @@ export function HomePage() {
                     <p className="text-stone-700 font-semibold text-2xl">Администрация общежития</p>
                 </div>
                 <div className=" w-full inline-flex gap-x-10 items-center">
-                    <AvatarPicture size={32}/>
+                    <AvatarPicture />
                     <ContactInfo info = {administrationMembers[0]} />
                 </div>
                 <div className=" ml-60 inline-flex gap-x-10 items-center">
                     <ContactInfo info={administrationMembers[1]} invert={true}/>
-                    <AvatarPicture size={32}/>
+                    <AvatarPicture />
                 </div>
                 <div className="w-full inline-flex gap-x-10 items-center mb-16">
-                    <AvatarPicture size={32}/>
+                    <AvatarPicture />
                     <ContactInfo info={administrationMembers[2]} />
                 </div>
                 <p className="w-full text-stone-700 font-semibold text-2xl mb-14">Студенческий совет общежития</p>
                 <div className=" inline-flex gap-x-10 items-center">
-                    <AvatarPicture size={32}/>
+                    <AvatarPicture />
                     <ContactInfo info={administrationMembers[3]} />
                 </div>
                 <div className="ml-60 inline-flex gap-x-10 items-center">
                     <p className="text-stone-700 text-md font-semibold">Подписывайся на группу ВК Студсовета</p>
-                    <AvatarPicture size={32}/>
+                    <AvatarPicture />
                 </div>
             </div>
         </div>
