@@ -19,3 +19,8 @@ The idea is to create a platform to simplify activities inside the hostel
 
 - Automation of the laundry
 - Application system
+
+## How to use
+
+Demo version is live now.
+[Go try it!](https://b6-alpha-test-latform.000webhostapp.com/)
