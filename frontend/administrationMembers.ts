@@ -1,4 +1,4 @@
-import {IPersonInfo} from "./models";
+import {IPersonInfo} from "./src/models";
 
 export const administrationMembers : IPersonInfo[] = [
     {

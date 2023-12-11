@@ -3,19 +3,22 @@ import {HomePage} from "./pages/HomePage";
 import {RegisterPage} from "./pages/RegisterPage";
 import {NewsPage} from "./pages/NewsPage";
 import {FAQPage} from "./pages/FAQPage";
+import {LoginPage} from "./pages/LoginPage";
 import {LaundryPage} from "./pages/LaundryPage";
 import {MarketPage} from "./pages/MarketPage";
 import {RequestsPage} from "./pages/RequestsPage";
+
 import {Routes, Route} from 'react-router-dom'
-import {NavBar} from "./components/NavBar";
-import {LoginPage} from "./pages/LoginPage";
+
+import {Footer} from "./components/Footer";
+import {Header} from "./components/Header";
 
 function App() {
 
   return (
       <>
-          <NavBar />
-          <div className="container max-w-5/6 mx-auto">
+          <Header />
+          <main>
               <Routes>
                   <Route path="/" element={<HomePage />}/>
                   <Route path="/register" element={<RegisterPage />}/>
@@ -26,8 +29,8 @@ function App() {
                   <Route path="/requests" element={<RequestsPage />}/>
                   <Route path="/login" element={<LoginPage />} />
               </Routes>
-          </div>
-          <div className="h-[350px] bg-orange-300" />
+          </main>
+          <Footer />
       </>
   )
 }

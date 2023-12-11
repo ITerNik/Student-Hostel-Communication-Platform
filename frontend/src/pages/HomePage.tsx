@@ -1,48 +1,38 @@
 import {AvatarPicture} from "../components/AvatarPicture";
-import {ContactInfo} from "../components/ContactInfo";
 import {administrationMembers} from "../../administrationMembers";
 import hostelFacade from "../assets/hostel-facade.png"
-import vectorLine from  "../assets/bg-line-around.svg"
+import lineThrough from "../assets/vector-zigzag-line.svg"
+import {PersonDescription} from "../components/PersonDescription";
 
 export function HomePage() {
     return (
-        <div className="block" >
-            <div className="p-16 w-full">
-                <h1 className="text-stone-700 text-[46px] font-bold mb-6 w-4/6">Общежитие №4 Университета ИТМО</h1>
-                <p className="text-amber-600 text-xl font-semibold">ул. Белорусская д.6, лит. А</p>
-            </div>
-            <img className="absolute rounded-2xl border-2 border-orange-600 w-1/2 -right-20 top-28"
-                 src={hostelFacade} alt="hostel-facade"/>
-            <div className="block py-40 px-32 bg-cover" style={{
-                backgroundImage : `url(${vectorLine})`
-
-            }}>
-                <div className="block mb-16 pt-10 ml-72">
-                    <h1 className="text-amber-600 text-[46px] font-bold w-4/6 mb-0 w-full">Общая информация</h1>
-                    <p className="text-stone-700 font-semibold text-2xl">Администрация общежития</p>
+        <div className="relative h-[2165px]">
+            <div className="w-[80%] mx-auto py-[80px]">
+                <div className="font-semibold">
+                    <h1 className="text-[56px] leading-[56px]">Общежитие №4 <br /> Университета ИТМО</h1>
+                    <p className="text-lg mt-5 text-orange-600">ул. Белорусская д.6, лит. А</p>
                 </div>
-                <div className=" w-full inline-flex gap-x-10 items-center">
-                    <AvatarPicture />
-                    <ContactInfo info = {administrationMembers[0]} />
+                <div className="text-right mt-[320px]">
+                    <h2 className="text-[56px] font-semibold text-orange-600">Общая информация</h2>
+                    <h3 className="text-3xl">Администрация общежития</h3>
                 </div>
-                <div className=" ml-60 inline-flex gap-x-10 items-center">
-                    <ContactInfo info={administrationMembers[1]} invert={true}/>
-                    <AvatarPicture />
+                <div className="pl-16 flex flex-col mt-[80px]">
+                    <PersonDescription size={40} info={administrationMembers[0]} align="start" />
+                    <PersonDescription size={32} info={administrationMembers[1]} align="end" />
+                    <PersonDescription size={32} info={administrationMembers[2]} align="start" />
                 </div>
-                <div className="w-full inline-flex gap-x-10 items-center mb-16">
-                    <AvatarPicture />
-                    <ContactInfo info={administrationMembers[2]} />
-                </div>
-                <p className="w-full text-stone-700 font-semibold text-2xl mb-14">Студенческий совет общежития</p>
-                <div className=" inline-flex gap-x-10 items-center">
-                    <AvatarPicture />
-                    <ContactInfo info={administrationMembers[3]} />
-                </div>
-                <div className="ml-60 inline-flex gap-x-10 items-center">
-                    <p className="text-stone-700 text-md font-semibold">Подписывайся на группу ВК Студсовета</p>
-                    <AvatarPicture />
+                <div className="px-10 flex flex-col mt-[240px]">
+                    <PersonDescription size={40} info={administrationMembers[3]} align="start" />
+                    <div className="flex items-center self-end w-[65%]">
+                        <p className="text-orange-600 text-xl font-semibold mr-10">Подписывайся на <span className="underline">группу ВК Студсовета</span></p>
+                        <AvatarPicture size={32} borderColor="orange-600"/>
+                    </div>
                 </div>
             </div>
+            <img src={lineThrough} alt="line-through"
+                     className="absolute top-[15%] w-[95%] h-[85%] mx-auto inset-x-0"/>
+            <img src={hostelFacade} alt="hostel-facade"
+            className="absolute top-[3%] h-[400px] object-cover w-[43%] rounded-bl-2xl rounded-tl-2xl right-0 border-[3px] border-amber-600"/>
         </div>
     )
 }
