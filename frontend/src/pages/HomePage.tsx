@@ -19,13 +19,13 @@ export function HomePage() {
                 <div className="pl-16 flex flex-col mt-[80px]">
                     <PersonDescription size={40} info={administrationMembers[0]} align="start" />
                     <PersonDescription size={32} info={administrationMembers[1]} align="end" />
-                    <PersonDescription size={32} info={administrationMembers[2]} align="start" />
+                    <PersonDescription size={40} info={administrationMembers[2]} align="start" />
                 </div>
                 <div className="px-10 flex flex-col mt-[240px]">
                     <PersonDescription size={40} info={administrationMembers[3]} align="start" />
                     <div className="flex items-center self-end w-[65%]">
                         <p className="text-orange-600 text-xl font-semibold mr-10">Подписывайся на <span className="underline">группу ВК Студсовета</span></p>
-                        <AvatarPicture size={32} borderColor="orange-600"/>
+                        <AvatarPicture size={32} borderColor="orange"/>
                     </div>
                 </div>
             </div>

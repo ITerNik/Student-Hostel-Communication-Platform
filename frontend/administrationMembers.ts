@@ -21,6 +21,6 @@ export const administrationMembers : IPersonInfo[] = [
     },
     {
         name: 'Арушанян Артём',
-        position : 'Председатель студенческого совета общежития'
+        position : 'Председатель студенческого совета'
     }
 ]

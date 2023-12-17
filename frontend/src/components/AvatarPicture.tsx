@@ -7,20 +7,31 @@ import avatar6 from '../assets/anonumus_profile_pictures/avatar-6.jpg'
 
 const AVATARS = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6]
 
+const SIZES = {
+    32: "w-32",
+    40: "w-40",
+    16: "w-16"
+}
+
+const BORDERS = {
+    orange: "border-orange-600",
+    white: "border-white"
+}
+
 function getRandomAvatar() {
     return AVATARS[Math.round(Math.random() * 5)]
 }
 
 interface AvatarPictureProps {
     source?: string,
-    size: number,
+    size?: number,
     borderColor?: string
     className? : string
 }
 
-export function AvatarPicture({source, size, borderColor, className}: AvatarPictureProps) {
+export function AvatarPicture({source, size = 32, borderColor = "white", className}: AvatarPictureProps) {
     if (!source) return (
-        <div className={`w-${size} rounded-full overflow-hidden border-${borderColor} border-[3px] ${className}`}>
+        <div className={`${SIZES[size]} ${BORDERS[borderColor]} rounded-full overflow-hidden border-[3px] ${className}`}>
             <img className="object-cover"
              src={getRandomAvatar()} alt="empty-avatar"/>
         </div>
