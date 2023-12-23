@@ -11,3 +11,14 @@ export interface INewsBlock {
     date: Date,
     body?: string
 }
+
+export interface IQuestionBlock {
+    id: number,
+    header: string,
+    body?: string
+}
+
+export interface IBox {
+    id: number,
+    status: string
+}

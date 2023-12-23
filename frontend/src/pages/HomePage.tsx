@@ -1,5 +1,5 @@
 import {AvatarPicture} from "../components/AvatarPicture";
-import {administrationMembers} from "../../administrationMembers";
+import {administrationMembers} from "../repositories/administrationMembers";
 import hostelFacade from "../assets/hostel-facade.png"
 import lineThrough from "../assets/vector-zigzag-line.svg"
 import {PersonDescription} from "../components/PersonDescription";

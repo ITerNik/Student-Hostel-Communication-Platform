@@ -1,4 +1,4 @@
-import {INewsBlock} from "./models";
+import {INewsBlock} from "../models";
 
 export const breakingNews : INewsBlock[] = [
     {

@@ -1,5 +1,5 @@
 import {NewsBlock} from "../components/ToggleListItem";
-import {breakingNews} from "../breakingNews";
+import {breakingNews} from "../repositories/breakingNews";
 
 export function NewsPage() {
     return (

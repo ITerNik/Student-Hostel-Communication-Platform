@@ -7,13 +7,13 @@ import avatar6 from '../assets/anonumus_profile_pictures/avatar-6.jpg'
 
 const AVATARS = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6]
 
-const SIZES = {
+const SIZES : {[key : number] : string} = {
     32: "w-32",
     40: "w-40",
     16: "w-16"
 }
 
-const BORDERS = {
+const BORDERS : {[key : string] : string} = {
     orange: "border-orange-600",
     white: "border-white"
 }

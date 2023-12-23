@@ -1,4 +1,5 @@
 import {QuestionBlock} from "../components/ToggleListItem";
+import {questions} from "../repositories/questions";
 
 export function FAQPage() {
 
@@ -9,9 +10,7 @@ export function FAQPage() {
                 <h1 className="font-semibold mt-[87px] text-5xl text-gray-800 mb-20">
                     Ответы на часто задаваемые вопросы
                 </h1>
-                <QuestionBlock header="Вопрос" body="Ответ на вопрос"/>
-                <QuestionBlock header="Вопрос" body="Ответ на вопрос"/>
-                <QuestionBlock header="Вопрос" body="Ответ на вопрос"/>
+                {questions.map((block) => <QuestionBlock block={block} />)}
             </div>
         </div>
         </>
