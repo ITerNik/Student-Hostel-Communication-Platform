@@ -13,7 +13,9 @@ export function Modal({children, title, onClose} : ModalProps) {
                 <h2 className="font-semibold text-3xl text-gray-800 mb-10">
                     {title}
                 </h2>
-                {children}
+                <div className="flex justify-center">
+                    {children}
+                </div>
             </div>
         </>
     )

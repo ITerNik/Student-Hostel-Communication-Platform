@@ -22,3 +22,11 @@ export interface IBox {
     id: number,
     status: string
 }
+
+export interface ITender {
+    id: number,
+    name: string,
+    cost: number,
+    image?: string,
+    description?: string
+}
