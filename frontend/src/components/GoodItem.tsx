@@ -1,14 +1,11 @@
 import {ITender} from "../models";
-import anonymousItem from '../assets/laundry-state/washing-ready.jpg'
-
 
 interface GoodItemProps {
     item: ITender,
-    onClick: () => void,
-    image: string
+    onClick: () => void
 }
 
-export function GoodItem({item, onClick, image}: GoodItemProps) {
+export function GoodItem({item, onClick}: GoodItemProps) {
     return (
         <div className="border-amber-600 rounded-xl border-4 flex flex-wrap w-full overflow-hidden">
             <h2 className="text-center p-2 text-white font-semibold bg-amber-600 text-2xl w-full">{item.name}</h2>
