@@ -3,21 +3,15 @@ package ru.ifmo.models;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.ifmo.entities.BoxStatus;
 
 @Entity
-@Table(name = "box")
+@Table(name = "question")
 @Data
 @NoArgsConstructor
-public class Box {
+public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
-    @Enumerated
-    private BoxStatus status;
-
-    @ManyToOne
-    @JoinColumn(name = "owner_id", referencedColumnName = "id")
-    private User owner;
+    private String theme;
+    private String answer;
 }
