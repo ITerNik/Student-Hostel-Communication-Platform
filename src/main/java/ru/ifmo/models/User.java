@@ -21,12 +21,12 @@ public class User {
     @Enumerated
     private UserPrivilege privilege;
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author", cascade = CascadeType.PERSIST)
     private List<Product> products;
 
-    @OneToMany(mappedBy = "owner")
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.PERSIST)
     private List<Box> boxes;
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author", cascade = CascadeType.PERSIST)
     private  List<NewsBlock> relatedNews;
 }

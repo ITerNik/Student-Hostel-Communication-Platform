@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import ru.ifmo.models.NewsBlock;
 
 @Repository
-public interface NewsRepository extends JpaRepository<NewsBlock, Integer> {
+public interface NewsRepository extends JpaRepository<NewsBlock, Long> {
 }

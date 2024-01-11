@@ -20,7 +20,8 @@ public class NewsBlock {
     private LocalDateTime publishDate;
     private String description;
 
-    @ManyToOne
-    @JoinColumn(name = "author_id", referencedColumnName = "id")
-    private User author;
+    /*@ManyToOne
+    @JoinColumn(name = "author_id", referencedColumnName = "id")*/
+    @Column(name = "author_id")
+    private long author;
 }
