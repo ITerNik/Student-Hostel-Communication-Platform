@@ -7,9 +7,10 @@ export interface IPersonInfo {
 
 export interface INewsBlock {
     id: number
-    title: string,
-    date: Date,
-    body?: string
+    header: string,
+    publishDate: Date,
+    description: string,
+    author: number
 }
 
 export interface IQuestionBlock {

@@ -1,7 +1,7 @@
 import {INewsBlock} from "../models";
 
 export const breakingNews : INewsBlock[] = [
-    {
+    /*{
         id: 1,
         title: 'Конкурс на лучшую комнату',
         date: new Date('2023-03-25'),
@@ -15,5 +15,5 @@ export const breakingNews : INewsBlock[] = [
         id: 3,
         title: 'Новость',
         date: new Date('2023-03-17'),
-    },
+    },*/
 ]

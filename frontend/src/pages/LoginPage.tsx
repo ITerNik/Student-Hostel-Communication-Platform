@@ -12,13 +12,11 @@ export function LoginPage() {
                         name="phone-number"
                         placeholder="Ваш номер телефона или email"
                         className="p-0 h-14 rounded-xl placeholder:text-gray-500 text-center text-lg w-full border-2 border-gray-500 border-solid w-full mt-6"
-                        type="email"
-                    ></input>
+                        type="email" />
                     <input
                         name="password"
                         placeholder="Введите пароль"
-                        className="p-0 h-14 rounded-xl placeholder:text-gray-500 text-center text-lg w-full border-2 border-gray-500 border-solid w-full mt-6"
-                    ></input>
+                        className="p-0 h-14 rounded-xl placeholder:text-gray-500 text-center text-lg w-full border-2 border-gray-500 border-solid w-full mt-6" />
                     <button className="cursor-pointer text-white py-4 px-2 bg-amber-600 rounded-xl font-semibold min-w-[340px] mt-6 text-center text-lg">
                         Войти
                     </button>

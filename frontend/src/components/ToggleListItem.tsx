@@ -32,7 +32,7 @@ function ToggleListItem({header, body, date} : ToggleListItemParams) {
                 onClick={setContentView}>
                 <h2 className='font-semibold text-4xl text-[34px] text-gray-800'>
                     {header}
-                    {date && <p className="mt-2 text-xl">{date.toLocaleDateString()}</p>}
+                    {date && <p className="mt-2 text-xl">{new Date(date).toLocaleDateString()}</p>}
                 </h2>
                 <div className="px-2 py-2 rounded-full bg-gray-300 text-3xl">
                     <img src={toggled ? arrowUp : arrowDown} className="w-10" alt="drop-arrow"/></div>
@@ -46,7 +46,7 @@ function ToggleListItem({header, body, date} : ToggleListItemParams) {
 
 export function NewsBlock({block} : NewsBlockProps) {
     return (
-        <ToggleListItem header={block.title} body={block.body || ""} date={block.date} />
+        <ToggleListItem header={block.header} body={block.description} date={block.publishDate} />
     )
 }
 

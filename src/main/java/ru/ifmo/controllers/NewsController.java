@@ -32,13 +32,13 @@ public class NewsController {
     }
 
     @PostMapping
-    public ResponseEntity<NewsBlock> createNews(@RequestBody NewsBlock block) throws URISyntaxException {
+    public ResponseEntity<NewsBlock> createNews(NewsBlock block) throws URISyntaxException {
         NewsBlock savedBlock = newsService.save(block);
         return ResponseEntity.created(new URI("/news/" + savedBlock.getId())).body(savedBlock);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<NewsBlock> updateNews(@PathVariable Long id, @RequestBody NewsBlock block) {
+    public ResponseEntity<NewsBlock> updateNews(@PathVariable Long id, NewsBlock block) {
         NewsBlock newBlock = newsService.update(id, block);
         return ResponseEntity.ok(newBlock);
     }
