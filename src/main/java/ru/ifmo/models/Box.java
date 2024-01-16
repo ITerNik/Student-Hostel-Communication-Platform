@@ -17,7 +17,8 @@ public class Box {
     @Enumerated
     private BoxStatus status;
 
-    @ManyToOne
-    @JoinColumn(name = "owner_id", referencedColumnName = "id")
-    private User owner;
+    /*@ManyToOne
+    @JoinColumn(name = "owner_id", referencedColumnName = "id")*/
+    @Column(name = "owner_id")
+    private long owner;
 }

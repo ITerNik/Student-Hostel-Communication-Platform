@@ -6,6 +6,7 @@ import {boxes} from "../repositories/boxes";
 export function LaundryPage() {
     const [modal, setModal] = useState(false)
     const [box, setBox] = useState(0)
+
     return (
         <>
             <div className="bg-gray-100 flex flex-col font-intertight items-center justify-start mx-auto w-full">

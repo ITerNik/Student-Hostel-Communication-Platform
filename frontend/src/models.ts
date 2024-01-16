@@ -21,7 +21,8 @@ export interface IQuestionBlock {
 
 export interface IBox {
     id: number,
-    status: string
+    status: number,
+    owner: number
 }
 
 export interface ITender {
