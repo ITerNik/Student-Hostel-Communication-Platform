@@ -1,11 +1,22 @@
 import {BoxStatus} from "../components/BoxStatus";
 import {Modal} from "../components/Modal";
-import {useState} from "react";
-import {boxes} from "../repositories/boxes";
+import {useEffect, useState} from "react";
+import {IBox} from "../models.ts";
 
 export function LaundryPage() {
     const [modal, setModal] = useState(false)
     const [box, setBox] = useState(0)
+    const [boxesData, setBoxesData] = useState<IBox[]>([])
+
+    async function loadData() {
+        fetch('http://localhost:8080/boxes')
+            .then(response => response.json())
+            .then(response => setBoxesData(response), error => alert(error))
+    }
+
+    useEffect(() => {
+        loadData()
+    }, []);
 
     return (
         <>
@@ -18,7 +29,7 @@ export function LaundryPage() {
                     <input type="text" placeholder="№" className="border-orange-600 border-4 rounded-xl text-center w-[10%]"/>
                 </div>
                 <div className="flex flex-wrap gap-4 items-center justify-center w-[90%] mb-20">
-                    {boxes.map(box => <BoxStatus state={box.status} key={box.id} onClick={() => {setModal(true); setBox(box.id)}}/>)}
+                    {boxesData.map(box => <BoxStatus state={box.status} key={box.id} onClick={() => {setModal(true); setBox(box.id)}}/>)}
 
                     {modal && <Modal title="Информация о заказе" onClose={() => setModal(false)}>
                         Бокс №{box}
