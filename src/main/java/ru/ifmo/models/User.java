@@ -3,7 +3,6 @@ package ru.ifmo.models;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.ifmo.entities.UserPrivilege;
 
 import java.util.List;
 
@@ -18,8 +17,8 @@ public class User {
     private String name;
     private String surname;
 
-    @Enumerated
-    private UserPrivilege privilege;
+   /* @OneToOne(mappedBy = "user")
+    private Credentials credentials;*/
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.PERSIST)
     private List<Product> products;
