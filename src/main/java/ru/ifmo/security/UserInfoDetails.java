@@ -1,31 +1,35 @@
 package ru.ifmo.security;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import ru.ifmo.models.Credentials;
+import ru.ifmo.models.UserInfo;
 
 import java.util.Collection;
 
-public class CredentialsDetails implements UserDetails {
-    private final Credentials credentials;
 
-    public CredentialsDetails(Credentials credentials) {
-        this.credentials = credentials;
+public class UserInfoDetails implements UserDetails {
+    private UserInfo user;
+    public UserInfoDetails(UserInfo user) {
+        this.user = user;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+
+        return user.getRoles().stream()
+                .map(role -> new SimpleGrantedAuthority(role.getRoleName()))
+                .toList();
     }
 
     @Override
     public String getPassword() {
-        return credentials.getPassword();
+        return user.getPassword();
     }
 
     @Override
     public String getUsername() {
-        return credentials.getUsername();
+        return user.getEmail();
     }
 
     @Override

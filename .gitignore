@@ -35,5 +35,6 @@ build/
 /mvnw.cmd
 /.mvn/
 /frontend/node_modules/
-src/main/resources/application.properties
+src/main/resources/application.yml
 
+/src/main/resources/certs/private.pem
