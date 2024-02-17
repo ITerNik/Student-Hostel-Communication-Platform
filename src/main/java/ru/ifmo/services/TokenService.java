@@ -40,16 +40,11 @@ public class TokenService {
 
     public String generateRefreshToken(UserInfoDetails userInfoDetails) {
         Instant now = Instant.now();
-        String roles = userInfoDetails.getAuthorities().stream()
-                .map(GrantedAuthority::getAuthority)
-                .collect(Collectors.joining(" "));
-
         JwtClaimsSet claimsSet = JwtClaimsSet.builder()
                 .issuer("b6-platform")
                 .issuedAt(now)
                 .expiresAt(now.plus(1, ChronoUnit.HOURS))
                 .subject(userInfoDetails.getUsername())
-                .claim("roles", roles)
                 .build();
 
         return jwtEncoder.encode(JwtEncoderParameters.from(claimsSet)).getTokenValue();
